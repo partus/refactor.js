@@ -7,7 +7,7 @@ Yet another simple tool for refactoring your code
 
 npm install
 
-change your project 
+change configuration to meet your requirements. 
 
 ##example
 
