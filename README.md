@@ -9,6 +9,8 @@ npm install
 
 change configuration to meet your requirements. 
 
+`node refactor.js` to proceed
+
 ##example
 
 Suppose you you want more colums in twitter bootstrap, this example changes your html code, that it uses 24 colums instead of 12
