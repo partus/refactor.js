@@ -1,7 +1,7 @@
 _ = require('underscore')
 fs = require('fs')
 // files = ['/home/user/dev/InSight-Multi-Modal/framework/client/views/otherViews/operational/operational.html']
-regexp = /(col-)([a-zA-Z-]+)([0-9]{1,2})/g
+regexp = /(Meteor.Texts)/g
 function replacer(match){
   var args = Array.prototype.slice.call(arguments);
   var fullstr = args[args.length-1]
@@ -9,7 +9,8 @@ function replacer(match){
   var parenthes = args.slice(1,arguments.length-2)
   console.log(" the parentheses " + parenthes[2])
   console.log(parenthes)
-  return parenthes[0]+parenthes[1]+parenthes[2]*2;
+  return "Texts";
+  // return parenthes[0]+parenthes[1]+parenthes[2]*2;
 }
 refactorfile =  function(file){
     fs.readFile(file, 'utf8', function (err,data) {
@@ -44,7 +45,7 @@ fs.readdir('/home/user',function(err,files){
   , filters: ["Temp", "_Temp"]
   };
 
-  walker = walk.walk("/home/user/dev/multishop/client", options);
+  walker = walk.walk("/home/user/dev/multishop/helpers", options);
 
   walker.on("file", function (root, fileStats, next) {
     console.log(root,fileStats.name)
